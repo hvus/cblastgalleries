@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+  <name>CB Last Galleries</name>
+  <author>Hector Vega</author>
+  <creationDate>2013-01-14</creationDate>
+  <copyright>Copyright (C) 2015 Hector Vega, Systemas HV, All rights reserved.</copyright>
+  <license> GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>support@sistemashv.com</authorEmail>
+  <authorUrl>www.sistemashv.com</authorUrl>
+  <version>1.0.0</version>
+  <description><![CDATA[Last Galleries from Users for Community Builder component using jquery developed by http://jgallery.jakubkowalczyk.pl
+    <br />
+    If you need help, please visit <a href="http://www.sistemashv.com" target="_blank">www.sistemashv.com</a>
+    ]]></description>
+	<files>
+		<filename module="mod_cblastgalleries">mod_cblastgalleries.php</filename>
+		<filename>mod_cblastgalleries.xml</filename>
+		<filename>index.html</filename>
+                <filename>helper.php</filename>
+		<folder>languages</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+                <folder>images</folder>
+                <folder>assets/fonts</folder>                
+                <folder>assets/css</folder>                
+                <folder>assets/js</folder>                
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="general_settings" label="MOD_GENERAL_SETTINGS" description="MOD_GENERAL_SETTINGS_FIELDSET_DESCRIPTION">
+                            <field 
+                                name="max_profiles_galleries" 
+                                type="text" 
+                                default="10" 
+                                label="MOD_LASTGALLERIESFROMCB_MAX_PROFILES_GALLERIES" 
+                                description="MOD_LASTGALLERIESFROMCB_MAX_PROFILES_GALLERIES_DESCRIPTION" 
+                                filter="integer" />
+                            <field 
+                                name="slideshowAutostart" 
+                                type="radio" 
+                                class="btn-group"
+                                default="true" 
+                                label="MOD_LASTGALLERIESFROMCB_AUTOSTART" 
+                                description="MOD_LASTGALLERIESFROMCB_AUTOSTART_DESC">
+                                   <option value="true">MOD_LASTGALLERIESFROMCB_TRUE</option>
+                                   <option value="false">MOD_LASTGALLERIESFROMCB_FALSE</option>
+                            </field>
+                            <field 
+                                name="title" 
+                                type="radio" 
+                                class="btn-group"
+                                default="true" 
+                                label="MOD_LASTGALLERIESFROMCB_TITLE" 
+                                description="MOD_LASTGALLERIESFROMCB_TITLE_DESC">
+                               <option value="true">MOD_LASTGALLERIESFROMCB_TRUE</option>
+                               <option value="false">MOD_LASTGALLERIESFROMCB_FALSE</option>
+                            </field>
+                            <field 
+                                name="thumbnailsPosition" 
+                                type="list" 
+                                default="bottom" 
+                                label="MOD_LASTGALLERIESFROMCB_THUMBNAILS_POSTION" 
+                                description="">
+                                    <option value="top">MOD_LASTGALLERIESFROMCB_TOP</option>
+                                    <option value="bottom">MOD_LASTGALLERIESFROMCB_BOTTOM</option>
+                                    <option value="left">MOD_LASTGALLERIESFROMCB_LEFT</option>
+                                    <option value="right">MOD_LASTGALLERIESFROMCB_RIGHT</option>
+                            </field>
+                            <field 
+                                name="backgroundColor" 
+                                type="color" 
+                                default="#000000"  
+                                label="MOD_LASTGALLERIESFROMCB_BACKGROUND_COLOR"  
+                                description="MOD_LASTGALLERIESFROMCB_BACKGROUND_COLOR_DESC" />
+                            <field 
+                                name="textColor" 
+                                type="color" 
+                                default="#ffffff"  
+                                label="MOD_LASTGALLERIESFROMCB_TEXT_COLOR"  
+                                description="MOD_LASTGALLERIESFROMCB_TEXT_COLOR_DESC" />
+                            <field 
+                                name="mode" 
+                                type="list" 
+                                default="standard" 
+                                label="MOD_LASTGALLERIESFROMCB_MODE" 
+                                description="">
+                                    <option value="full-screen">MOD_LASTGALLERIESFROMCB_FULL_SCREEN</option>
+                                    <option value="standard">MOD_LASTGALLERIESFROMCB_STANDARD</option>
+                                    <option value="slider">MOD_LASTGALLERIESFROMCB_SLIDER</option>
+                            </field>        
+                            <field 
+                                name="zoomSize" 
+                                type="list" 
+                                default="original" 
+                                label="MOD_LASTGALLERIESFROMCB_ZOOM_SIZE" 
+                                description="">
+                                    <option value="fit">MOD_LASTGALLERIESFROMCB_FIT</option>
+                                    <option value="original">MOD_LASTGALLERIESFROMCBORIGINAL</option>
+                                    <option value="fill">MOD_LASTGALLERIESFROMCB_FILL</option>
+                            </field> 
+			
+		        <field name="poweredbysistemashv" 
+                            type="radio" 
+                            class="btn-group"
+                            default="Yes" 
+                            label="MOD_POWEREDBYSISTEMASHV" 
+                            description="MOD_LASTGALLERIESFROMCB_POWEREDBYSISTEMASHV_DESC">
+                               <option 
+                                   value="Yes">MOD_LASTGALLERIESFROMCB_YES</option>
+                               <option 
+                                   value="No">MOD_LASTGALLERIESFROMCB_NO</option>
+                        </field>
+                </fieldset> 
+                </fields>
+               
+	</config> 
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.mod_cblastgalleries.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_cblastgalleries.ini</language>
+	</languages>
+</extension>
